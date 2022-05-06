@@ -74,7 +74,7 @@ const showInfo = (infoActive) => {
         <img :class="state.active == 'map' ? 'border-t-4 border-amber-500' : ''" :src="'src/assets/map.png'" width="40"/>
       </button>
       <router-link
-        :to="{name: 'detailUser', params: {user: user}}"
+        :to="{name: 'detailUser', params: {user: JSON.stringify(user)}}"
         class="btn btn-blue"
       >Detail</router-link>
     </div>
